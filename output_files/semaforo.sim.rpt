@@ -1,0 +1,785 @@
+Simulator report for semaforo
+Wed Dec 12 10:11:35 2018
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 292 nodes    ;
+; Simulation Coverage         ;       0.33 % ;
+; Total Number of Transitions ; 199          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                            ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                          ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                       ; Timing        ;
+; Start time                                                                                 ; 0 ns                                             ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                              ;               ;
+; Vector input source                                                                        ; /home/allex.m/182/dlp/projeto-final/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                               ; On            ;
+; Check outputs                                                                              ; Off                                              ; Off           ;
+; Report simulation coverage                                                                 ; On                                               ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                               ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                               ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                               ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                              ; Off           ;
+; Detect glitches                                                                            ; Off                                              ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                              ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                              ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                              ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                              ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                               ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                       ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                              ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                             ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.33 % ;
+; Total nodes checked                                 ; 292          ;
+; Total output ports checked                          ; 303          ;
+; Total output ports with complete 1/0-value coverage ; 1            ;
+; Total output ports with no 1/0-value coverage       ; 302          ;
+; Total output ports with no 1-value coverage         ; 302          ;
+; Total output ports with no 0-value coverage         ; 302          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------+
+; Complete 1/0-Value Coverage                         ;
++---------------+------------------+------------------+
+; Node Name     ; Output Port Name ; Output Port Type ;
++---------------+------------------+------------------+
+; |contador|clk ; |contador|clk    ; out              ;
++---------------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                              ;
++-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                     ; Output Port Name                                                                   ; Output Port Type ;
++-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; |contador|P1~0                                                                ; |contador|P1~0                                                                     ; out0             ;
+; |contador|clk_out~reg0                                                        ; |contador|clk_out~reg0                                                             ; regout           ;
+; |contador|P1~1                                                                ; |contador|P1~1                                                                     ; out0             ;
+; |contador|tempU~0                                                             ; |contador|tempU~0                                                                  ; out              ;
+; |contador|tempU~1                                                             ; |contador|tempU~1                                                                  ; out              ;
+; |contador|tempU~2                                                             ; |contador|tempU~2                                                                  ; out              ;
+; |contador|tempU~3                                                             ; |contador|tempU~3                                                                  ; out              ;
+; |contador|tempD_vd~0                                                          ; |contador|tempD_vd~0                                                               ; out              ;
+; |contador|tempD_vd~1                                                          ; |contador|tempD_vd~1                                                               ; out              ;
+; |contador|tempD_vd~2                                                          ; |contador|tempD_vd~2                                                               ; out              ;
+; |contador|tempD~0                                                             ; |contador|tempD~0                                                                  ; out              ;
+; |contador|tempD~1                                                             ; |contador|tempD~1                                                                  ; out              ;
+; |contador|tempD~2                                                             ; |contador|tempD~2                                                                  ; out              ;
+; |contador|clk_out~0                                                           ; |contador|clk_out~0                                                                ; out              ;
+; |contador|tempU~4                                                             ; |contador|tempU~4                                                                  ; out              ;
+; |contador|tempU~5                                                             ; |contador|tempU~5                                                                  ; out              ;
+; |contador|tempU~6                                                             ; |contador|tempU~6                                                                  ; out              ;
+; |contador|tempU~7                                                             ; |contador|tempU~7                                                                  ; out              ;
+; |contador|tempD_vm~0                                                          ; |contador|tempD_vm~0                                                               ; out              ;
+; |contador|tempD_vm~1                                                          ; |contador|tempD_vm~1                                                               ; out              ;
+; |contador|tempD_vm~2                                                          ; |contador|tempD_vm~2                                                               ; out              ;
+; |contador|tempD~3                                                             ; |contador|tempD~3                                                                  ; out              ;
+; |contador|tempD~4                                                             ; |contador|tempD~4                                                                  ; out              ;
+; |contador|tempD~5                                                             ; |contador|tempD~5                                                                  ; out              ;
+; |contador|clk_out~1                                                           ; |contador|clk_out~1                                                                ; out              ;
+; |contador|tempU_vd~0                                                          ; |contador|tempU_vd~0                                                               ; out              ;
+; |contador|tempU_vd~1                                                          ; |contador|tempU_vd~1                                                               ; out              ;
+; |contador|tempU_vd~2                                                          ; |contador|tempU_vd~2                                                               ; out              ;
+; |contador|tempU_vd~3                                                          ; |contador|tempU_vd~3                                                               ; out              ;
+; |contador|tempU~8                                                             ; |contador|tempU~8                                                                  ; out              ;
+; |contador|tempU~9                                                             ; |contador|tempU~9                                                                  ; out              ;
+; |contador|tempU~10                                                            ; |contador|tempU~10                                                                 ; out              ;
+; |contador|tempU~11                                                            ; |contador|tempU~11                                                                 ; out              ;
+; |contador|tempD_vd~3                                                          ; |contador|tempD_vd~3                                                               ; out              ;
+; |contador|tempD_vd~4                                                          ; |contador|tempD_vd~4                                                               ; out              ;
+; |contador|tempD_vd~5                                                          ; |contador|tempD_vd~5                                                               ; out              ;
+; |contador|tempD~6                                                             ; |contador|tempD~6                                                                  ; out              ;
+; |contador|tempD~7                                                             ; |contador|tempD~7                                                                  ; out              ;
+; |contador|tempD~8                                                             ; |contador|tempD~8                                                                  ; out              ;
+; |contador|clk_out~2                                                           ; |contador|clk_out~2                                                                ; out              ;
+; |contador|tempU_vm~0                                                          ; |contador|tempU_vm~0                                                               ; out              ;
+; |contador|tempU_vm~1                                                          ; |contador|tempU_vm~1                                                               ; out              ;
+; |contador|tempU_vm~2                                                          ; |contador|tempU_vm~2                                                               ; out              ;
+; |contador|tempU_vm~3                                                          ; |contador|tempU_vm~3                                                               ; out              ;
+; |contador|tempD_vm~3                                                          ; |contador|tempD_vm~3                                                               ; out              ;
+; |contador|tempD_vm~4                                                          ; |contador|tempD_vm~4                                                               ; out              ;
+; |contador|tempD_vm~5                                                          ; |contador|tempD_vm~5                                                               ; out              ;
+; |contador|tempD~9                                                             ; |contador|tempD~9                                                                  ; out              ;
+; |contador|tempD~10                                                            ; |contador|tempD~10                                                                 ; out              ;
+; |contador|tempD~11                                                            ; |contador|tempD~11                                                                 ; out              ;
+; |contador|tempD~12                                                            ; |contador|tempD~12                                                                 ; out              ;
+; |contador|tempD~13                                                            ; |contador|tempD~13                                                                 ; out              ;
+; |contador|tempD~14                                                            ; |contador|tempD~14                                                                 ; out              ;
+; |contador|tempU~12                                                            ; |contador|tempU~12                                                                 ; out              ;
+; |contador|tempU~13                                                            ; |contador|tempU~13                                                                 ; out              ;
+; |contador|tempU~14                                                            ; |contador|tempU~14                                                                 ; out              ;
+; |contador|tempU~15                                                            ; |contador|tempU~15                                                                 ; out              ;
+; |contador|tempU~16                                                            ; |contador|tempU~16                                                                 ; out              ;
+; |contador|tempU~17                                                            ; |contador|tempU~17                                                                 ; out              ;
+; |contador|tempU~18                                                            ; |contador|tempU~18                                                                 ; out              ;
+; |contador|tempU~19                                                            ; |contador|tempU~19                                                                 ; out              ;
+; |contador|tempD_vd~6                                                          ; |contador|tempD_vd~6                                                               ; out              ;
+; |contador|tempD_vd~7                                                          ; |contador|tempD_vd~7                                                               ; out              ;
+; |contador|tempD_vd~8                                                          ; |contador|tempD_vd~8                                                               ; out              ;
+; |contador|tempD_vd~9                                                          ; |contador|tempD_vd~9                                                               ; out              ;
+; |contador|tempD_vd~10                                                         ; |contador|tempD_vd~10                                                              ; out              ;
+; |contador|tempD_vd~11                                                         ; |contador|tempD_vd~11                                                              ; out              ;
+; |contador|tempU_vd~4                                                          ; |contador|tempU_vd~4                                                               ; out              ;
+; |contador|tempU_vd~5                                                          ; |contador|tempU_vd~5                                                               ; out              ;
+; |contador|tempU_vd~6                                                          ; |contador|tempU_vd~6                                                               ; out              ;
+; |contador|tempU_vd~7                                                          ; |contador|tempU_vd~7                                                               ; out              ;
+; |contador|tempU_vd~8                                                          ; |contador|tempU_vd~8                                                               ; out              ;
+; |contador|tempU_vd~9                                                          ; |contador|tempU_vd~9                                                               ; out              ;
+; |contador|tempU_vd~10                                                         ; |contador|tempU_vd~10                                                              ; out              ;
+; |contador|tempU_vd~11                                                         ; |contador|tempU_vd~11                                                              ; out              ;
+; |contador|tempD_vm~6                                                          ; |contador|tempD_vm~6                                                               ; out              ;
+; |contador|tempD_vm~7                                                          ; |contador|tempD_vm~7                                                               ; out              ;
+; |contador|tempD_vm~8                                                          ; |contador|tempD_vm~8                                                               ; out              ;
+; |contador|tempD_vm~9                                                          ; |contador|tempD_vm~9                                                               ; out              ;
+; |contador|tempD_vm~10                                                         ; |contador|tempD_vm~10                                                              ; out              ;
+; |contador|tempD_vm~11                                                         ; |contador|tempD_vm~11                                                              ; out              ;
+; |contador|tempU_vm~4                                                          ; |contador|tempU_vm~4                                                               ; out              ;
+; |contador|tempU_vm~5                                                          ; |contador|tempU_vm~5                                                               ; out              ;
+; |contador|tempU_vm~6                                                          ; |contador|tempU_vm~6                                                               ; out              ;
+; |contador|tempU_vm~7                                                          ; |contador|tempU_vm~7                                                               ; out              ;
+; |contador|tempU_vm~8                                                          ; |contador|tempU_vm~8                                                               ; out              ;
+; |contador|tempU_vm~9                                                          ; |contador|tempU_vm~9                                                               ; out              ;
+; |contador|tempU_vm~10                                                         ; |contador|tempU_vm~10                                                              ; out              ;
+; |contador|tempU_vm~11                                                         ; |contador|tempU_vm~11                                                              ; out              ;
+; |contador|tempAmarelo~0                                                       ; |contador|tempAmarelo~0                                                            ; out              ;
+; |contador|tempAmarelo~1                                                       ; |contador|tempAmarelo~1                                                            ; out              ;
+; |contador|clk_out~3                                                           ; |contador|clk_out~3                                                                ; out              ;
+; |contador|clk_out~4                                                           ; |contador|clk_out~4                                                                ; out              ;
+; |contador|\P1:tempD[2]                                                        ; |contador|\P1:tempD[2]                                                             ; regout           ;
+; |contador|\P1:tempD[1]                                                        ; |contador|\P1:tempD[1]                                                             ; regout           ;
+; |contador|\P1:tempD[0]                                                        ; |contador|\P1:tempD[0]                                                             ; regout           ;
+; |contador|\P1:tempU[3]                                                        ; |contador|\P1:tempU[3]                                                             ; regout           ;
+; |contador|\P1:tempU[2]                                                        ; |contador|\P1:tempU[2]                                                             ; regout           ;
+; |contador|\P1:tempU[1]                                                        ; |contador|\P1:tempU[1]                                                             ; regout           ;
+; |contador|\P1:tempU[0]                                                        ; |contador|\P1:tempU[0]                                                             ; regout           ;
+; |contador|\P1:tempAmarelo[1]                                                  ; |contador|\P1:tempAmarelo[1]                                                       ; regout           ;
+; |contador|\P1:tempAmarelo[0]                                                  ; |contador|\P1:tempAmarelo[0]                                                       ; regout           ;
+; |contador|\P1:tempD_vd[2]                                                     ; |contador|\P1:tempD_vd[2]                                                          ; regout           ;
+; |contador|\P1:tempD_vd[1]                                                     ; |contador|\P1:tempD_vd[1]                                                          ; regout           ;
+; |contador|\P1:tempD_vd[0]                                                     ; |contador|\P1:tempD_vd[0]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[3]                                                     ; |contador|\P1:tempU_vd[3]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[2]                                                     ; |contador|\P1:tempU_vd[2]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[1]                                                     ; |contador|\P1:tempU_vd[1]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[0]                                                     ; |contador|\P1:tempU_vd[0]                                                          ; regout           ;
+; |contador|\P1:tempD_vm[2]                                                     ; |contador|\P1:tempD_vm[2]                                                          ; regout           ;
+; |contador|\P1:tempD_vm[1]                                                     ; |contador|\P1:tempD_vm[1]                                                          ; regout           ;
+; |contador|\P1:tempD_vm[0]                                                     ; |contador|\P1:tempD_vm[0]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[3]                                                     ; |contador|\P1:tempU_vm[3]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[2]                                                     ; |contador|\P1:tempU_vm[2]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[1]                                                     ; |contador|\P1:tempU_vm[1]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[0]                                                     ; |contador|\P1:tempU_vm[0]                                                          ; regout           ;
+; |contador|clk_out                                                             ; |contador|clk_out                                                                  ; pin_out          ;
+; |contador|rst                                                                 ; |contador|rst                                                                      ; out              ;
+; |contador|bcd_U[0]                                                            ; |contador|bcd_U[0]                                                                 ; pin_out          ;
+; |contador|bcd_U[1]                                                            ; |contador|bcd_U[1]                                                                 ; pin_out          ;
+; |contador|bcd_U[2]                                                            ; |contador|bcd_U[2]                                                                 ; pin_out          ;
+; |contador|bcd_U[3]                                                            ; |contador|bcd_U[3]                                                                 ; pin_out          ;
+; |contador|bcd_D[0]                                                            ; |contador|bcd_D[0]                                                                 ; pin_out          ;
+; |contador|bcd_D[1]                                                            ; |contador|bcd_D[1]                                                                 ; pin_out          ;
+; |contador|bcd_D[2]                                                            ; |contador|bcd_D[2]                                                                 ; pin_out          ;
+; |contador|bcd_D[3]                                                            ; |contador|bcd_D[3]                                                                 ; pin_out          ;
+; |contador|LessThan0~0                                                         ; |contador|LessThan0~0                                                              ; out0             ;
+; |contador|LessThan0~1                                                         ; |contador|LessThan0~1                                                              ; out0             ;
+; |contador|LessThan0~2                                                         ; |contador|LessThan0~2                                                              ; out0             ;
+; |contador|LessThan1~0                                                         ; |contador|LessThan1~0                                                              ; out0             ;
+; |contador|LessThan1~1                                                         ; |contador|LessThan1~1                                                              ; out0             ;
+; |contador|LessThan1~2                                                         ; |contador|LessThan1~2                                                              ; out0             ;
+; |contador|Equal0~0                                                            ; |contador|Equal0~0                                                                 ; out0             ;
+; |contador|Equal1~0                                                            ; |contador|Equal1~0                                                                 ; out0             ;
+; |contador|Equal2~0                                                            ; |contador|Equal2~0                                                                 ; out0             ;
+; |contador|Equal3~0                                                            ; |contador|Equal3~0                                                                 ; out0             ;
+; |contador|Equal4~0                                                            ; |contador|Equal4~0                                                                 ; out0             ;
+; |contador|lpm_add_sub:Add4|result_node[0]                                     ; |contador|lpm_add_sub:Add4|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add4|result_node[1]                                     ; |contador|lpm_add_sub:Add4|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]~1                      ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]~1                  ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add3|result_node[0]                                     ; |contador|lpm_add_sub:Add3|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add3|result_node[1]                                     ; |contador|lpm_add_sub:Add3|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add3|result_node[2]                                     ; |contador|lpm_add_sub:Add3|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]~1                      ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]~1                  ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]~2                  ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add3|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add3|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add2|result_node[0]                                     ; |contador|lpm_add_sub:Add2|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|result_node[1]                                     ; |contador|lpm_add_sub:Add2|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|result_node[2]                                     ; |contador|lpm_add_sub:Add2|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|result_node[3]                                     ; |contador|lpm_add_sub:Add2|result_node[3]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]~1                      ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]~1                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]~2                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]~3                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]~3                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~12                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~12                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~13                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~13                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~14                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~14                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~15                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~15                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add1|result_node[0]                                     ; |contador|lpm_add_sub:Add1|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add1|result_node[1]                                     ; |contador|lpm_add_sub:Add1|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add1|result_node[2]                                     ; |contador|lpm_add_sub:Add1|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]~1                      ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~1                  ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~2                  ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add1|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add1|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add0|result_node[0]                                     ; |contador|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|result_node[1]                                     ; |contador|lpm_add_sub:Add0|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|result_node[2]                                     ; |contador|lpm_add_sub:Add0|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|result_node[3]                                     ; |contador|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]~1                      ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~1                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~2                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~3                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~3                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
++-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                              ;
++-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                     ; Output Port Name                                                                   ; Output Port Type ;
++-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+; |contador|P1~0                                                                ; |contador|P1~0                                                                     ; out0             ;
+; |contador|clk_out~reg0                                                        ; |contador|clk_out~reg0                                                             ; regout           ;
+; |contador|P1~1                                                                ; |contador|P1~1                                                                     ; out0             ;
+; |contador|tempU~0                                                             ; |contador|tempU~0                                                                  ; out              ;
+; |contador|tempU~1                                                             ; |contador|tempU~1                                                                  ; out              ;
+; |contador|tempU~2                                                             ; |contador|tempU~2                                                                  ; out              ;
+; |contador|tempU~3                                                             ; |contador|tempU~3                                                                  ; out              ;
+; |contador|tempD_vd~0                                                          ; |contador|tempD_vd~0                                                               ; out              ;
+; |contador|tempD_vd~1                                                          ; |contador|tempD_vd~1                                                               ; out              ;
+; |contador|tempD_vd~2                                                          ; |contador|tempD_vd~2                                                               ; out              ;
+; |contador|tempD~0                                                             ; |contador|tempD~0                                                                  ; out              ;
+; |contador|tempD~1                                                             ; |contador|tempD~1                                                                  ; out              ;
+; |contador|tempD~2                                                             ; |contador|tempD~2                                                                  ; out              ;
+; |contador|clk_out~0                                                           ; |contador|clk_out~0                                                                ; out              ;
+; |contador|tempU~4                                                             ; |contador|tempU~4                                                                  ; out              ;
+; |contador|tempU~5                                                             ; |contador|tempU~5                                                                  ; out              ;
+; |contador|tempU~6                                                             ; |contador|tempU~6                                                                  ; out              ;
+; |contador|tempU~7                                                             ; |contador|tempU~7                                                                  ; out              ;
+; |contador|tempD_vm~0                                                          ; |contador|tempD_vm~0                                                               ; out              ;
+; |contador|tempD_vm~1                                                          ; |contador|tempD_vm~1                                                               ; out              ;
+; |contador|tempD_vm~2                                                          ; |contador|tempD_vm~2                                                               ; out              ;
+; |contador|tempD~3                                                             ; |contador|tempD~3                                                                  ; out              ;
+; |contador|tempD~4                                                             ; |contador|tempD~4                                                                  ; out              ;
+; |contador|tempD~5                                                             ; |contador|tempD~5                                                                  ; out              ;
+; |contador|clk_out~1                                                           ; |contador|clk_out~1                                                                ; out              ;
+; |contador|tempU_vd~0                                                          ; |contador|tempU_vd~0                                                               ; out              ;
+; |contador|tempU_vd~1                                                          ; |contador|tempU_vd~1                                                               ; out              ;
+; |contador|tempU_vd~2                                                          ; |contador|tempU_vd~2                                                               ; out              ;
+; |contador|tempU_vd~3                                                          ; |contador|tempU_vd~3                                                               ; out              ;
+; |contador|tempU~8                                                             ; |contador|tempU~8                                                                  ; out              ;
+; |contador|tempU~9                                                             ; |contador|tempU~9                                                                  ; out              ;
+; |contador|tempU~10                                                            ; |contador|tempU~10                                                                 ; out              ;
+; |contador|tempU~11                                                            ; |contador|tempU~11                                                                 ; out              ;
+; |contador|tempD_vd~3                                                          ; |contador|tempD_vd~3                                                               ; out              ;
+; |contador|tempD_vd~4                                                          ; |contador|tempD_vd~4                                                               ; out              ;
+; |contador|tempD_vd~5                                                          ; |contador|tempD_vd~5                                                               ; out              ;
+; |contador|tempD~6                                                             ; |contador|tempD~6                                                                  ; out              ;
+; |contador|tempD~7                                                             ; |contador|tempD~7                                                                  ; out              ;
+; |contador|tempD~8                                                             ; |contador|tempD~8                                                                  ; out              ;
+; |contador|clk_out~2                                                           ; |contador|clk_out~2                                                                ; out              ;
+; |contador|tempU_vm~0                                                          ; |contador|tempU_vm~0                                                               ; out              ;
+; |contador|tempU_vm~1                                                          ; |contador|tempU_vm~1                                                               ; out              ;
+; |contador|tempU_vm~2                                                          ; |contador|tempU_vm~2                                                               ; out              ;
+; |contador|tempU_vm~3                                                          ; |contador|tempU_vm~3                                                               ; out              ;
+; |contador|tempD_vm~3                                                          ; |contador|tempD_vm~3                                                               ; out              ;
+; |contador|tempD_vm~4                                                          ; |contador|tempD_vm~4                                                               ; out              ;
+; |contador|tempD_vm~5                                                          ; |contador|tempD_vm~5                                                               ; out              ;
+; |contador|tempD~9                                                             ; |contador|tempD~9                                                                  ; out              ;
+; |contador|tempD~10                                                            ; |contador|tempD~10                                                                 ; out              ;
+; |contador|tempD~11                                                            ; |contador|tempD~11                                                                 ; out              ;
+; |contador|tempD~12                                                            ; |contador|tempD~12                                                                 ; out              ;
+; |contador|tempD~13                                                            ; |contador|tempD~13                                                                 ; out              ;
+; |contador|tempD~14                                                            ; |contador|tempD~14                                                                 ; out              ;
+; |contador|tempU~12                                                            ; |contador|tempU~12                                                                 ; out              ;
+; |contador|tempU~13                                                            ; |contador|tempU~13                                                                 ; out              ;
+; |contador|tempU~14                                                            ; |contador|tempU~14                                                                 ; out              ;
+; |contador|tempU~15                                                            ; |contador|tempU~15                                                                 ; out              ;
+; |contador|tempU~16                                                            ; |contador|tempU~16                                                                 ; out              ;
+; |contador|tempU~17                                                            ; |contador|tempU~17                                                                 ; out              ;
+; |contador|tempU~18                                                            ; |contador|tempU~18                                                                 ; out              ;
+; |contador|tempU~19                                                            ; |contador|tempU~19                                                                 ; out              ;
+; |contador|tempD_vd~6                                                          ; |contador|tempD_vd~6                                                               ; out              ;
+; |contador|tempD_vd~7                                                          ; |contador|tempD_vd~7                                                               ; out              ;
+; |contador|tempD_vd~8                                                          ; |contador|tempD_vd~8                                                               ; out              ;
+; |contador|tempD_vd~9                                                          ; |contador|tempD_vd~9                                                               ; out              ;
+; |contador|tempD_vd~10                                                         ; |contador|tempD_vd~10                                                              ; out              ;
+; |contador|tempD_vd~11                                                         ; |contador|tempD_vd~11                                                              ; out              ;
+; |contador|tempU_vd~4                                                          ; |contador|tempU_vd~4                                                               ; out              ;
+; |contador|tempU_vd~5                                                          ; |contador|tempU_vd~5                                                               ; out              ;
+; |contador|tempU_vd~6                                                          ; |contador|tempU_vd~6                                                               ; out              ;
+; |contador|tempU_vd~7                                                          ; |contador|tempU_vd~7                                                               ; out              ;
+; |contador|tempU_vd~8                                                          ; |contador|tempU_vd~8                                                               ; out              ;
+; |contador|tempU_vd~9                                                          ; |contador|tempU_vd~9                                                               ; out              ;
+; |contador|tempU_vd~10                                                         ; |contador|tempU_vd~10                                                              ; out              ;
+; |contador|tempU_vd~11                                                         ; |contador|tempU_vd~11                                                              ; out              ;
+; |contador|tempD_vm~6                                                          ; |contador|tempD_vm~6                                                               ; out              ;
+; |contador|tempD_vm~7                                                          ; |contador|tempD_vm~7                                                               ; out              ;
+; |contador|tempD_vm~8                                                          ; |contador|tempD_vm~8                                                               ; out              ;
+; |contador|tempD_vm~9                                                          ; |contador|tempD_vm~9                                                               ; out              ;
+; |contador|tempD_vm~10                                                         ; |contador|tempD_vm~10                                                              ; out              ;
+; |contador|tempD_vm~11                                                         ; |contador|tempD_vm~11                                                              ; out              ;
+; |contador|tempU_vm~4                                                          ; |contador|tempU_vm~4                                                               ; out              ;
+; |contador|tempU_vm~5                                                          ; |contador|tempU_vm~5                                                               ; out              ;
+; |contador|tempU_vm~6                                                          ; |contador|tempU_vm~6                                                               ; out              ;
+; |contador|tempU_vm~7                                                          ; |contador|tempU_vm~7                                                               ; out              ;
+; |contador|tempU_vm~8                                                          ; |contador|tempU_vm~8                                                               ; out              ;
+; |contador|tempU_vm~9                                                          ; |contador|tempU_vm~9                                                               ; out              ;
+; |contador|tempU_vm~10                                                         ; |contador|tempU_vm~10                                                              ; out              ;
+; |contador|tempU_vm~11                                                         ; |contador|tempU_vm~11                                                              ; out              ;
+; |contador|tempAmarelo~0                                                       ; |contador|tempAmarelo~0                                                            ; out              ;
+; |contador|tempAmarelo~1                                                       ; |contador|tempAmarelo~1                                                            ; out              ;
+; |contador|clk_out~3                                                           ; |contador|clk_out~3                                                                ; out              ;
+; |contador|clk_out~4                                                           ; |contador|clk_out~4                                                                ; out              ;
+; |contador|\P1:tempD[2]                                                        ; |contador|\P1:tempD[2]                                                             ; regout           ;
+; |contador|\P1:tempD[1]                                                        ; |contador|\P1:tempD[1]                                                             ; regout           ;
+; |contador|\P1:tempD[0]                                                        ; |contador|\P1:tempD[0]                                                             ; regout           ;
+; |contador|\P1:tempU[3]                                                        ; |contador|\P1:tempU[3]                                                             ; regout           ;
+; |contador|\P1:tempU[2]                                                        ; |contador|\P1:tempU[2]                                                             ; regout           ;
+; |contador|\P1:tempU[1]                                                        ; |contador|\P1:tempU[1]                                                             ; regout           ;
+; |contador|\P1:tempU[0]                                                        ; |contador|\P1:tempU[0]                                                             ; regout           ;
+; |contador|\P1:tempAmarelo[1]                                                  ; |contador|\P1:tempAmarelo[1]                                                       ; regout           ;
+; |contador|\P1:tempAmarelo[0]                                                  ; |contador|\P1:tempAmarelo[0]                                                       ; regout           ;
+; |contador|\P1:tempD_vd[2]                                                     ; |contador|\P1:tempD_vd[2]                                                          ; regout           ;
+; |contador|\P1:tempD_vd[1]                                                     ; |contador|\P1:tempD_vd[1]                                                          ; regout           ;
+; |contador|\P1:tempD_vd[0]                                                     ; |contador|\P1:tempD_vd[0]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[3]                                                     ; |contador|\P1:tempU_vd[3]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[2]                                                     ; |contador|\P1:tempU_vd[2]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[1]                                                     ; |contador|\P1:tempU_vd[1]                                                          ; regout           ;
+; |contador|\P1:tempU_vd[0]                                                     ; |contador|\P1:tempU_vd[0]                                                          ; regout           ;
+; |contador|\P1:tempD_vm[2]                                                     ; |contador|\P1:tempD_vm[2]                                                          ; regout           ;
+; |contador|\P1:tempD_vm[1]                                                     ; |contador|\P1:tempD_vm[1]                                                          ; regout           ;
+; |contador|\P1:tempD_vm[0]                                                     ; |contador|\P1:tempD_vm[0]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[3]                                                     ; |contador|\P1:tempU_vm[3]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[2]                                                     ; |contador|\P1:tempU_vm[2]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[1]                                                     ; |contador|\P1:tempU_vm[1]                                                          ; regout           ;
+; |contador|\P1:tempU_vm[0]                                                     ; |contador|\P1:tempU_vm[0]                                                          ; regout           ;
+; |contador|clk_out                                                             ; |contador|clk_out                                                                  ; pin_out          ;
+; |contador|rst                                                                 ; |contador|rst                                                                      ; out              ;
+; |contador|bcd_U[0]                                                            ; |contador|bcd_U[0]                                                                 ; pin_out          ;
+; |contador|bcd_U[1]                                                            ; |contador|bcd_U[1]                                                                 ; pin_out          ;
+; |contador|bcd_U[2]                                                            ; |contador|bcd_U[2]                                                                 ; pin_out          ;
+; |contador|bcd_U[3]                                                            ; |contador|bcd_U[3]                                                                 ; pin_out          ;
+; |contador|bcd_D[0]                                                            ; |contador|bcd_D[0]                                                                 ; pin_out          ;
+; |contador|bcd_D[1]                                                            ; |contador|bcd_D[1]                                                                 ; pin_out          ;
+; |contador|bcd_D[2]                                                            ; |contador|bcd_D[2]                                                                 ; pin_out          ;
+; |contador|bcd_D[3]                                                            ; |contador|bcd_D[3]                                                                 ; pin_out          ;
+; |contador|LessThan0~0                                                         ; |contador|LessThan0~0                                                              ; out0             ;
+; |contador|LessThan0~1                                                         ; |contador|LessThan0~1                                                              ; out0             ;
+; |contador|LessThan0~2                                                         ; |contador|LessThan0~2                                                              ; out0             ;
+; |contador|LessThan1~0                                                         ; |contador|LessThan1~0                                                              ; out0             ;
+; |contador|LessThan1~1                                                         ; |contador|LessThan1~1                                                              ; out0             ;
+; |contador|LessThan1~2                                                         ; |contador|LessThan1~2                                                              ; out0             ;
+; |contador|Equal0~0                                                            ; |contador|Equal0~0                                                                 ; out0             ;
+; |contador|Equal1~0                                                            ; |contador|Equal1~0                                                                 ; out0             ;
+; |contador|Equal2~0                                                            ; |contador|Equal2~0                                                                 ; out0             ;
+; |contador|Equal3~0                                                            ; |contador|Equal3~0                                                                 ; out0             ;
+; |contador|Equal4~0                                                            ; |contador|Equal4~0                                                                 ; out0             ;
+; |contador|lpm_add_sub:Add4|result_node[0]                                     ; |contador|lpm_add_sub:Add4|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add4|result_node[1]                                     ; |contador|lpm_add_sub:Add4|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]~1                      ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add4|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]~1                  ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add4|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add4|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add3|result_node[0]                                     ; |contador|lpm_add_sub:Add3|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add3|result_node[1]                                     ; |contador|lpm_add_sub:Add3|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add3|result_node[2]                                     ; |contador|lpm_add_sub:Add3|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]~1                      ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add3|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]~1                  ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]~2                  ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add3|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add3|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add3|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add3|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add2|result_node[0]                                     ; |contador|lpm_add_sub:Add2|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|result_node[1]                                     ; |contador|lpm_add_sub:Add2|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|result_node[2]                                     ; |contador|lpm_add_sub:Add2|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|result_node[3]                                     ; |contador|lpm_add_sub:Add2|result_node[3]                                          ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]~1                      ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[3]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add2|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]~1                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]~2                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]~3                  ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]~3                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add2|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add2|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~12                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~12                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~13                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~13                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~14                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~14                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|_~15                                 ; |contador|lpm_add_sub:Add2|addcore:adder|_~15                                      ; out0             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add1|result_node[0]                                     ; |contador|lpm_add_sub:Add1|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add1|result_node[1]                                     ; |contador|lpm_add_sub:Add1|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add1|result_node[2]                                     ; |contador|lpm_add_sub:Add1|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]~1                      ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add1|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~1                  ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~2                  ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add1|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add1|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add1|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add1|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
+; |contador|lpm_add_sub:Add0|result_node[0]                                     ; |contador|lpm_add_sub:Add0|result_node[0]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|result_node[1]                                     ; |contador|lpm_add_sub:Add0|result_node[1]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|result_node[2]                                     ; |contador|lpm_add_sub:Add0|result_node[2]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|result_node[3]                                     ; |contador|lpm_add_sub:Add0|result_node[3]                                          ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                      ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]~0                           ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[0]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]~0                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[0]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~0                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~0                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~1                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~1                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~2                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~2                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~3                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~3                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]~1                      ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]~1                           ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[3]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[2]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[2]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[1]                        ; |contador|lpm_add_sub:Add0|addcore:adder|datab_node[1]                             ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~1                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]~1                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~2                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]~2                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~3                  ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]~3                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[3]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[2]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                    ; |contador|lpm_add_sub:Add0|addcore:adder|unreg_res_node[1]                         ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~4                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~4                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~5                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~5                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~6                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~6                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~7                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~7                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~8                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~8                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~9                                  ; |contador|lpm_add_sub:Add0|addcore:adder|_~9                                       ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~10                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~10                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~11                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~11                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~12                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~12                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~13                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~13                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~14                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~14                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|_~15                                 ; |contador|lpm_add_sub:Add0|addcore:adder|_~15                                      ; out0             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]      ; sout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]      ; sout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]      ; sout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~COUT ; cout             ;
+; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0] ; |contador|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]      ; sout             ;
++-------------------------------------------------------------------------------+------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Dec 12 10:11:34 2018
+Info: Command: quartus_sim --simulation_results_format=VWF semaforo -c semaforo
+Info (324025): Using vector source file "/home/allex.m/182/dlp/projeto-final/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempD[0]~2" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempD_vd[2]~2" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempD_vd[2]~3" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempD_vd[2]~5" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempD_vm[2]~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempU[0]~2" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempU_vd[0]~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempU_vd[3]~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempU_vm[0]~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "\P1:tempU_vm[1]~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Add0~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Add0~1" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Add1~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Add2~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Add2~1" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Add3~0" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "P1~2" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "~GND" in design.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       0.33 %
+Info (328052): Number of transitions in simulation is 199
+Info (324045): Vector file semaforo.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 273 megabytes
+    Info: Processing ended: Wed Dec 12 10:11:35 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
