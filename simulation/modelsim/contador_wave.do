@@ -2,15 +2,13 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /contador/rst
 add wave -noupdate /contador/clk
-add wave -noupdate /contador/vermelho
-add wave -noupdate /contador/amarelo
-add wave -noupdate /contador/P1/tempAmarelo
-add wave -noupdate /contador/verde
+add wave -noupdate /contador/flag
 add wave -noupdate /contador/P1/tempD
 add wave -noupdate /contador/P1/tempU
+add wave -noupdate /contador/count
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ps} 0}
-quietly wave cursor active 0
+WaveRestoreCursors {{Cursor 1} {4180 ps} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -25,4 +23,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits us
 update
-WaveRestoreZoom {0 ps} {1 ns}
+WaveRestoreZoom {3300 ps} {4300 ps}

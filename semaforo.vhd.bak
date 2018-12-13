@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity semaforo IS
+	generic (
+				fclk2_in : natural := 25000000;
+				D	: natural := 3;
+				U	: natural := 0;
+				tipo_display	: natural := 1);
+	port
+	(
+		clk50MHz :  in  STD_LOGIC;
+		rst_in	:	in	std_LOGIC;
+		ssd_D :  out  STD_LOGIC_VECTOR(0 TO 6);
+		ssd_U :  out  STD_LOGIC_VECTOR(0 TO 6)
+		contador : out std_LOGIC
+	);
+end entity;
+
+architecture ifsc of semaforo is
+
+-- Declaraçao dos componentes utilizados
+	component div_clk is
+		generic (fclk2 : natural := 50);       -- frequecia para simulacao
+		port (
+			clk : in std_logic;
+			rst : in std_LOGIC;
+			clk_out : out std_logic
+		);
+	end component;

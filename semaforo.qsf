@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY display
+set_global_assignment -name TOP_LEVEL_ENTITY maquinaDeEstado
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:27:16  DECEMBER 06, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
@@ -49,13 +49,6 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "/home/allex.m/182/dlp/projeto-final/Waveform.vwf"
-set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/tb_contador.do
-set_global_assignment -name SOURCE_FILE README.md
-set_global_assignment -name VHDL_FILE contador.vhd
-set_global_assignment -name VHDL_FILE div_clk.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
-set_global_assignment -name VHDL_FILE bin2ssd.vhd
-set_global_assignment -name VHDL_FILE display.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
@@ -92,6 +85,17 @@ set_location_assignment PIN_G19 -to vermelho
 set_location_assignment PIN_Y2 -to clk50MHz
 set_location_assignment PIN_AB28 -to rst_in
 set_location_assignment PIN_E21 -to amarelo
+set_global_assignment -name VHDL_FILE semaforo.vhd
+set_global_assignment -name VHDL_FILE maquinaDeEstado.vhd
+set_global_assignment -name COMMAND_MACRO_FILE simulation/modelsim/tb_contador.do
+set_global_assignment -name SOURCE_FILE README.md
+set_global_assignment -name VHDL_FILE contador.vhd
+set_global_assignment -name VHDL_FILE div_clk.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE bin2ssd.vhd
+set_global_assignment -name VHDL_FILE display.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

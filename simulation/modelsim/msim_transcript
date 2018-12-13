@@ -18,14 +18,7 @@
 # -- Compiling entity contador
 # -- Compiling architecture arch1 of contador
 # 
-do tb_contador.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity contador
-# -- Compiling architecture arch1 of contador
+vsim work.contador
 # vsim work.contador 
 # //  ModelSim ALTERA 10.1d Nov  2 2012 Linux 4.14.32-rancher2
 # //
@@ -36,6 +29,219 @@ do tb_contador.do
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+add wave -position end  sim:/contador/rst
+add wave -position end  sim:/contador/clk
+add wave -position end  /contador/P1/tempU
+add wave -position end  /contador/P1/tempD
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/182/dlp/projeto-final/simulation/modelsim/contador_wave.do
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+add wave -position end  sim:/contador/flag
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/182/dlp/projeto-final/simulation/modelsim/contador_wave.do
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+add wave -position end  sim:/contador/count
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/182/dlp/projeto-final/simulation/modelsim/contador_wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/182/dlp/projeto-final/simulation/modelsim/contador_wave.do
+add wave -position end  sim:/contador/count
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# ** Error: ../../contador.vhd(37): Target of signal assignment is not a signal.
+# ** Error: ../../contador.vhd(38): Target of signal assignment is not a signal.
+# ** Error: ../../contador.vhd(39): near "else": expecting ';'
+# ** Error: ../../contador.vhd(49): near "IF": expecting PROCESS
+# ** Error: ../../contador.vhd(52): near "process": expecting ';'
+# ** Error: /opt/altera/13.0sp1/modelsim_ae/linuxaloem/vcom failed.
+# Error in macro ./tb_contador.do line 1
+# /opt/altera/13.0sp1/modelsim_ae/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 -work work -O0 ../../contador.vhd"
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/182/dlp/projeto-final/simulation/modelsim/contador_wave.do
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador(arch1)
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# ** Error: ../../contador.vhd(19): Integer literal 0 is not of type ieee.std_logic_1164.STD_LOGIC.
+# ** Error: ../../contador.vhd(58): VHDL Compiler exiting
+# ** Error: /opt/altera/13.0sp1/modelsim_ae/linuxaloem/vcom failed.
+# Error in macro ./tb_contador.do line 1
+# /opt/altera/13.0sp1/modelsim_ae/linuxaloem/vcom failed.
+#     while executing
+# "vcom -93 -work work -O0 ../../contador.vhd"
+do tb_contador.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador
+# -- Compiling architecture arch1 of contador
+# vsim work.contador 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)

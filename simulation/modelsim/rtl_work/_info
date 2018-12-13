@@ -4,7 +4,7 @@ K3
 cModel Technology
 Z0 d/home/allex.m/182/dlp/projeto-final/simulation/modelsim
 Econtador
-Z1 w1544640244
+Z1 w1544708249
 Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
 Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
@@ -13,12 +13,12 @@ Z6 8../../contador.vhd
 Z7 F../../contador.vhd
 l0
 L5
-V^LM<fNUWFEbn6m1A_S@TR0
-!s100 8CiB_2oFLc?F?X_I6eKl23
+VWfk1fzI9>EQJYIiRBHaFi1
+!s100 cAl:444?>^WP[fKESE`Bo0
 Z8 OV;C;10.1d;51
 31
 !i10b 1
-Z9 !s108 1544640248.948222
+Z9 !s108 1544708518.978418
 Z10 !s90 -reportprogress|300|-93|-work|work|-O0|../../contador.vhd|
 Z11 !s107 ../../contador.vhd|
 Z12 o-93 -work work -O0
@@ -27,11 +27,11 @@ Aarch1
 R2
 R3
 R4
-Z14 DEx4 work 8 contador 0 22 ^LM<fNUWFEbn6m1A_S@TR0
+Z14 DEx4 work 8 contador 0 22 Wfk1fzI9>EQJYIiRBHaFi1
 l19
 L17
-VC:0<Y1Z<Q6QAOKOzVVYiD1
-!s100 KcjEa0iYcTkl:kbHBJRje1
+Z15 VY9?E4K2M8eAU:G1Y]lm7X1
+Z16 !s100 `P[n==zA0^2[=_:mTUbgX0
 R8
 31
 !i10b 1
