@@ -1,18 +1,37 @@
-|div_clk
-clk => clk_1seg_temp.CLK
-clk => \divClock:temp[0].CLK
-clk => \divClock:temp[1].CLK
-clk => \divClock:temp[2].CLK
-clk => \divClock:temp[3].CLK
-clk => \divClock:temp[4].CLK
-clk => \divClock:temp[5].CLK
-rst => clk_1seg_temp.PRESET
-rst => \divClock:temp[0].ACLR
-rst => \divClock:temp[1].ACLR
-rst => \divClock:temp[2].ACLR
-rst => \divClock:temp[3].ACLR
-rst => \divClock:temp[4].ACLR
-rst => \divClock:temp[5].ACLR
-clk_out <= clk_1seg_temp.DB_MAX_OUTPUT_PORT_TYPE
+|maquinaDeEstado
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+clk => pr_state~9.DATAIN
+rst => count[0].ACLR
+rst => count[1].ACLR
+rst => count[2].ACLR
+rst => count[3].ACLR
+rst => pr_state~11.DATAIN
+s1 => process_1.IN0
+s2 => process_1.IN1
+btn1 => process_1.IN0
+btn1 => process_1.IN0
+btn1 => process_1.IN0
+btn2 => process_1.IN1
+btn2 => process_1.IN1
+btn2 => process_1.IN1
+contador => process_1.IN1
+contador => rst_dip_vd.IN1
+contador => Selector2.IN3
+contador => Selector4.IN2
+contador => Selector8.IN2
+contador => Selector10.IN3
+contador => Selector14.IN3
+flag_vm <= <VCC>
+flag_vd <= <VCC>
+rst_dip_vd <= <GND>
+rst_dip_vm <= <GND>
+CVD <= <VCC>
+CVM <= CVM.DB_MAX_OUTPUT_PORT_TYPE
+CAM <= CAM.DB_MAX_OUTPUT_PORT_TYPE
+PVD <= PVD.DB_MAX_OUTPUT_PORT_TYPE
+PVM <= <VCC>
 
 

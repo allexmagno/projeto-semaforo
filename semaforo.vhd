@@ -9,11 +9,13 @@ entity semaforo IS
 				U_vm	: natural := 0;
 				D_vd	: natural := 2;
 				U_vd	: natural := 0;
+				TC	: integer := 10;
 				tipo_display	: natural := 1);
 	port
 	(
 		clk50MHz :  in  STD_LOGIC;
 		rst_in	:	in	std_LOGIC;
+		s1_in, s2_in, b1, b2	: in std_logic;
 		ssd_D :  out  STD_LOGIC_VECTOR(0 TO 6);
 		ssd_U :  out  STD_LOGIC_VECTOR(0 TO 6);
 		CVM, CVD, CAM, PVM, PVD : out std_logic;
@@ -49,7 +51,17 @@ architecture ifsc of semaforo is
 	);
 end component;
 
+component sensor is
+	generic (
+		Tc : integer := 10);
+	port(
+		movimento,clk,rst : in std_logic;
+		presenca : out std_logic
+	);
+end component;
+
 component maquinaDeEstado IS
+		GENERIC(TC : natural := 10);
 		PORT (
 			clk, rst : IN STD_LOGIC;
 			s1, s2, btn1, btn2, contador : IN STD_LOGIC;
@@ -59,6 +71,7 @@ END component;
 
 signal clk_1seg, count_temp, flag_vm_temp, flag_vd_temp : std_logic;
 signal disp_vm_temp, disp_vd_temp, rst_in_temp : std_logic;
+signal s1_temp, s2_temp: std_logic;
 begin
 
 	rst_in_temp <= '0' when rst_in = '0' or disp_vd_temp = '0' or disp_vm_temp = '0'; 
@@ -101,7 +114,31 @@ begin
 		contador => count_temp
 	);
 	
-	U4: maquinaDeEstado
+	
+	
+	U4:component sensor
+	generic map(
+		Tc => TC)
+	port map(
+		movimento => s1_in,
+		clk => clk_1seg,
+		rst => rst_in,
+		presenca => s1_temp
+	);
+
+	U5:component sensor
+	generic map (
+		Tc => TC)
+	port map(
+		movimento => s2_in,
+		clk => clk_1seg,
+		rst => rst_in,
+		presenca => s2_temp
+	);	
+	
+	
+	U6: maquinaDeEstado
+		GENERIC MAP(TC => TC)
 		PORT MAP(
 			clk => clk_1seg,
 			rst => rst_in,
