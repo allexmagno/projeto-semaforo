@@ -15,11 +15,12 @@ entity semaforo IS
 	(
 		clk50MHz :  in  STD_LOGIC;
 		rst_in	:	in	std_LOGIC;
-		s1_in, s2_in, b1, b2	: in std_logic;
-		ssd_D :  out  STD_LOGIC_VECTOR(0 TO 6);
-		ssd_U :  out  STD_LOGIC_VECTOR(0 TO 6);
-		CVM, CVD, CAM, PVM, PVD : out std_logic;
-		contador : out std_LOGIC
+		s1_in, s2_in, b1_in, b2_in	: in std_logic;
+		ssd_D, ssd_Dp :  out  STD_LOGIC_VECTOR(0 TO 6);
+		ssd_U, ssd_Up :  out  STD_LOGIC_VECTOR(0 TO 6);
+		ssd_st : out STD_LOGIC_VECTOR(0 TO 6);
+		count_out : out STD_LOGIC_VECTOR(6 DOWNTO 0);
+		CVM, CVD, CAM, PVM, PVD, LUZ, clk_out_1s, count_fim_vd, count_fim_vm : out std_logic
 	);
 end entity;
 
@@ -35,7 +36,7 @@ architecture ifsc of semaforo is
 		);
 	end component;
 	
-	component display IS
+component display IS
 	generic (
 				D	: natural := 3;
 				U	: natural := 0;
@@ -44,11 +45,21 @@ architecture ifsc of semaforo is
 	(
 		clk :  in  STD_LOGIC;
 		rst_in	:	in	std_LOGIC;
-		flag	: in std_LOGIC;
+		enable, load, rstS : in std_logic;
 		ssd_D :  out  STD_LOGIC_VECTOR(0 TO 6);
 		ssd_U :  out  STD_LOGIC_VECTOR(0 TO 6);
-		contador : out std_LOGIC
+		count_fim : out std_LOGIC
 	);
+end component;
+
+
+component bin2ssd is
+--  generic (ac_ccn : natural := 1); -- Anodo comum
+  generic (ac_ccn : natural := 1); -- Catodo comum
+  port (
+    bin_in : in std_logic_vector(3 downto 0);
+    ssd_out : out std_logic_vector(0 to 6)
+  );
 end component;
 
 component sensor is
@@ -64,17 +75,24 @@ component maquinaDeEstado IS
 		GENERIC(TC : natural := 10);
 		PORT (
 			clk, rst : IN STD_LOGIC;
-			s1, s2, btn1, btn2, contador : IN STD_LOGIC;
-			flag_vm, flag_vd, rst_disp_vd, rst_disp_vm : out std_logic := '0';
-			CVD, CVM, CAM, PVD, PVM : OUT STD_LOGIC);
+			s1, s2, btn1, btn2, contador_fim_VD, contador_fim_VM : IN STD_LOGIC;
+			load_vd, load_vm : out std_logic;
+			st_out : OUT STD_LOGIC_vector (3 downto 0);
+			count_out : OUT STD_LOGIC_vector (6 downto 0);
+			CVD, CVM, CAM, PVD, PVM, LUZ : OUT STD_LOGIC);
 END component;
 
-signal clk_1seg, count_temp, flag_vm_temp, flag_vd_temp : std_logic;
-signal disp_vm_temp, disp_vd_temp, rst_in_temp : std_logic;
-signal s1_temp, s2_temp: std_logic;
+signal clk_1seg, count_fim_vm_temp, count_fim_vd_temp : std_logic;
+signal load_vd_temp, load_vm_temp, s1_temp, s2_temp: std_logic;
+signal ssd_D_temp, ssd_U_temp : STD_LOGIC_VECTOR(0 TO 6);
+signal ssd_D_temp1, ssd_U_temp1 : STD_LOGIC_VECTOR(0 TO 6);
+signal st_out_temp : std_logic_vector(3 downto 0);
+signal count_out_temp : STD_LOGIC_VECTOR(6 DOWNTO 0);
 begin
-
-	rst_in_temp <= '0' when rst_in = '0' or disp_vd_temp = '0' or disp_vm_temp = '0'; 
+	count_out <= count_out_temp;
+	count_fim_vd <= count_fim_vd_temp;
+	count_fim_vm <= count_fim_vm_temp;
+	clk_out_1s <= clk_1seg;
 	U1: div_clk
 	generic map(
 		fclk2 => fclk2_in
@@ -93,11 +111,13 @@ begin
 		tipo_display => tipo_display)	
 	 port map(
 		clk => clk_1seg,
-		rst_in => rst_in_temp,
-		flag => flag_vm_temp,
-		ssd_D => ssd_D,
-		ssd_U => ssd_U,
-		contador => count_temp
+		rst_in => rst_in,
+		enable => '1',
+		load => load_vm_temp,
+		rstS => '0',
+		ssd_D => ssd_D_temp,
+		ssd_U => ssd_U_temp,
+		count_fim => count_fim_vm_temp
 	);
 	
 	U3: display
@@ -107,11 +127,13 @@ begin
 		tipo_display => tipo_display)	
 	port map(
 		clk => clk_1seg,
-		rst_in => rst_in_temp,
-		flag => flag_vd_temp,
-		ssd_D => ssd_D,
-		ssd_U => ssd_U,
-		contador => count_temp
+		rst_in => rst_in,
+		enable => '1',
+		load => load_vd_temp,
+		rstS => '0',
+		ssd_D => ssd_D_temp1,
+		ssd_U => ssd_U_temp1,
+		count_fim => count_fim_vd_temp
 	);
 	
 	
@@ -138,23 +160,41 @@ begin
 	
 	
 	U6: maquinaDeEstado
-		GENERIC MAP(TC => TC)
+		GENERIC MAP(TC => 99)
 		PORT MAP(
 			clk => clk_1seg,
 			rst => rst_in,
-			s1 => s1_in,
-			s2 => s2_in,
-			btn1 => b1,
-			btn2 => b2,
-			contador => count_temp,
-			flag_vm => flag_vm_temp,
-			flag_vd => flag_vd_temp,
-			rst_disp_vd => disp_vd_temp,
-			rst_disp_vm => disp_vm_temp,
-			CVD => CVD,
-			CVM => CVM,
-			CAM => CAM,
-			PVD => PVD,
-			PVM => PVM);
+			s1 => s1_temp, 
+			s2 => s2_temp, 
+			btn1 => not b1_in, 
+			btn2 => not b2_in, 
+			contador_fim_VD => count_fim_vd_temp,
+			contador_fim_VM => count_fim_vm_temp,
+			load_vd => load_vd_temp,
+			load_vm => load_vm_temp, 
+			CVD => CVD, 
+			CVM => CVM, 
+			CAM => CAM, 
+			PVD => PVD, 
+			PVM => PVM,
+			st_out => st_out_temp,
+			count_out => count_out_temp,
+			LUZ => LUZ);
+		
+		ssd_D <= ssd_D_temp;
+		ssd_U <= ssd_U_temp;
+		ssd_Dp <= ssd_D_temp1;
+		ssd_Up <= ssd_U_temp1;
+		
+		U7: bin2ssd
+	--  generic (ac_ccn : natural := 1); -- Anodo comum
+		generic map (ac_ccn => tipo_display) -- Catodo comum
+		port map (
+			bin_in => st_out_temp,
+			ssd_out => ssd_st
+		);
+
+
+		
 end architecture;
 

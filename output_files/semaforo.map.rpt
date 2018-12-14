@@ -1,5 +1,5 @@
 Analysis & Synthesis report for semaforo
-Thu Dec 13 14:48:20 2018
+Fri Dec 14 14:42:59 2018
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -13,13 +13,30 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |maquinaDeEstado|pr_state
-  9. User-Specified and Inferred Latches
+  8. State Machine - |semaforo|maquinaDeEstado:U6|pr_state
+  9. Registers Removed During Synthesis
  10. General Register Statistics
- 11. Source assignments for Top-level Entity: |maquinaDeEstado
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |maquinaDeEstado
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for maquinaDeEstado:U6
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |semaforo
+ 15. Parameter Settings for User Entity Instance: div_clk:U1
+ 16. Parameter Settings for User Entity Instance: display:U2
+ 17. Parameter Settings for User Entity Instance: display:U2|contador:U1
+ 18. Parameter Settings for User Entity Instance: display:U2|bin2ssd:U2
+ 19. Parameter Settings for User Entity Instance: display:U2|bin2ssd:U3
+ 20. Parameter Settings for User Entity Instance: display:U3
+ 21. Parameter Settings for User Entity Instance: display:U3|contador:U1
+ 22. Parameter Settings for User Entity Instance: display:U3|bin2ssd:U2
+ 23. Parameter Settings for User Entity Instance: display:U3|bin2ssd:U3
+ 24. Parameter Settings for User Entity Instance: sensor:U4
+ 25. Parameter Settings for User Entity Instance: sensor:U5
+ 26. Parameter Settings for User Entity Instance: maquinaDeEstado:U6
+ 27. Parameter Settings for User Entity Instance: bin2ssd:U7
+ 28. Port Connectivity Checks: "display:U3"
+ 29. Port Connectivity Checks: "display:U2"
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +62,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 13 14:48:19 2018            ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 14 14:42:59 2018            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; semaforo                                         ;
-; Top-level Entity Name              ; maquinaDeEstado                                  ;
+; Top-level Entity Name              ; semaforo                                         ;
 ; Family                             ; Cyclone IV E                                     ;
-; Total logic elements               ; 32                                               ;
-;     Total combinational functions  ; 32                                               ;
-;     Dedicated logic registers      ; 12                                               ;
-; Total registers                    ; 12                                               ;
-; Total pins                         ; 16                                               ;
+; Total logic elements               ; 158                                              ;
+;     Total combinational functions  ; 158                                              ;
+;     Dedicated logic registers      ; 64                                               ;
+; Total registers                    ; 64                                               ;
+; Total pins                         ; 57                                               ;
 ; Total virtual pins                 ; 0                                                ;
 ; Total memory bits                  ; 0                                                ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -68,7 +85,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; maquinaDeEstado    ; semaforo           ;
+; Top-level entity name                                                      ; semaforo           ; semaforo           ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -172,84 +189,92 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                            ; Library ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
+; sensor.vhd                       ; yes             ; User VHDL File  ; /home/allex.m/182/dlp/projeto-final/sensor.vhd          ;         ;
+; semaforo.vhd                     ; yes             ; User VHDL File  ; /home/allex.m/182/dlp/projeto-final/semaforo.vhd        ;         ;
 ; maquinaDeEstado.vhd              ; yes             ; User VHDL File  ; /home/allex.m/182/dlp/projeto-final/maquinaDeEstado.vhd ;         ;
+; contador.vhd                     ; yes             ; User VHDL File  ; /home/allex.m/182/dlp/projeto-final/contador.vhd        ;         ;
+; div_clk.vhd                      ; yes             ; User VHDL File  ; /home/allex.m/182/dlp/projeto-final/div_clk.vhd         ;         ;
+; bin2ssd.vhd                      ; yes             ; User VHDL File  ; /home/allex.m/182/dlp/projeto-final/bin2ssd.vhd         ;         ;
+; display.vhd                      ; yes             ; User VHDL File  ; /home/allex.m/182/dlp/projeto-final/display.vhd         ;         ;
 +----------------------------------+-----------------+-----------------+---------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 32        ;
-;                                             ;           ;
-; Total combinational functions               ; 32        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 10        ;
-;     -- 3 input functions                    ; 18        ;
-;     -- <=2 input functions                  ; 4         ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 32        ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 12        ;
-;     -- Dedicated logic registers            ; 12        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 16        ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 12        ;
-; Total fan-out                               ; 164       ;
-; Average fan-out                             ; 2.16      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 158          ;
+;                                             ;              ;
+; Total combinational functions               ; 158          ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 69           ;
+;     -- 3 input functions                    ; 32           ;
+;     -- <=2 input functions                  ; 57           ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 121          ;
+;     -- arithmetic mode                      ; 37           ;
+;                                             ;              ;
+; Total registers                             ; 64           ;
+;     -- Dedicated logic registers            ; 64           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 57           ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; rst_in~input ;
+; Maximum fan-out                             ; 60           ;
+; Total fan-out                               ; 790          ;
+; Average fan-out                             ; 2.35         ;
++---------------------------------------------+--------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |maquinaDeEstado           ; 32 (32)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |maquinaDeEstado    ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; |semaforo                  ; 158 (0)           ; 64 (0)       ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |semaforo                        ; work         ;
+;    |bin2ssd:U7|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|bin2ssd:U7             ; work         ;
+;    |display:U2|            ; 20 (0)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U2             ; work         ;
+;       |bin2ssd:U2|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U2|bin2ssd:U2  ; work         ;
+;       |bin2ssd:U3|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U2|bin2ssd:U3  ; work         ;
+;       |contador:U1|        ; 10 (10)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U2|contador:U1 ; work         ;
+;    |display:U3|            ; 22 (0)            ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U3             ; work         ;
+;       |bin2ssd:U2|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U3|bin2ssd:U2  ; work         ;
+;       |bin2ssd:U3|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U3|bin2ssd:U3  ; work         ;
+;       |contador:U1|        ; 12 (12)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|display:U3|contador:U1 ; work         ;
+;    |div_clk:U1|            ; 52 (52)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|div_clk:U1             ; work         ;
+;    |maquinaDeEstado:U6|    ; 40 (40)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|maquinaDeEstado:U6     ; work         ;
+;    |sensor:U4|             ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|sensor:U4              ; work         ;
+;    |sensor:U5|             ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |semaforo|sensor:U5              ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |maquinaDeEstado|pr_state                                                                                                    ;
-+----------------+----------------+----------------+----------------+--------------+--------------+--------------+--------------+--------------+
-; Name           ; pr_state.wait3 ; pr_state.wait2 ; pr_state.wait1 ; pr_state.st4 ; pr_state.st3 ; pr_state.st2 ; pr_state.st1 ; pr_state.st0 ;
-+----------------+----------------+----------------+----------------+--------------+--------------+--------------+--------------+--------------+
-; pr_state.st0   ; 0              ; 0              ; 0              ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; pr_state.st1   ; 0              ; 0              ; 0              ; 0            ; 0            ; 0            ; 1            ; 1            ;
-; pr_state.st2   ; 0              ; 0              ; 0              ; 0            ; 0            ; 1            ; 0            ; 1            ;
-; pr_state.st3   ; 0              ; 0              ; 0              ; 0            ; 1            ; 0            ; 0            ; 1            ;
-; pr_state.st4   ; 0              ; 0              ; 0              ; 1            ; 0            ; 0            ; 0            ; 1            ;
-; pr_state.wait1 ; 0              ; 0              ; 1              ; 0            ; 0            ; 0            ; 0            ; 1            ;
-; pr_state.wait2 ; 0              ; 1              ; 0              ; 0            ; 0            ; 0            ; 0            ; 1            ;
-; pr_state.wait3 ; 1              ; 0              ; 0              ; 0            ; 0            ; 0            ; 0            ; 1            ;
-+----------------+----------------+----------------+----------------+--------------+--------------+--------------+--------------+--------------+
++------------------------------------------------------------------------------------------------------------+
+; State Machine - |semaforo|maquinaDeEstado:U6|pr_state                                                      ;
++----------------+----------------+--------------+--------------+--------------+--------------+--------------+
+; Name           ; pr_state.wait1 ; pr_state.st4 ; pr_state.st3 ; pr_state.st2 ; pr_state.st1 ; pr_state.st0 ;
++----------------+----------------+--------------+--------------+--------------+--------------+--------------+
+; pr_state.st0   ; 0              ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; pr_state.st1   ; 0              ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; pr_state.st2   ; 0              ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; pr_state.st3   ; 0              ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; pr_state.st4   ; 0              ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; pr_state.wait1 ; 1              ; 0            ; 0            ; 0            ; 0            ; 1            ;
++----------------+----------------+--------------+--------------+--------------+--------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; nx_state.st3_342                                   ; Selector17          ; yes                    ;
-; timer[3]                                           ; WideOr8             ; yes                    ;
-; nx_state.st1_370                                   ; Selector17          ; yes                    ;
-; nx_state.st4_328                                   ; Selector17          ; yes                    ;
-; nx_state.st2_356                                   ; Selector17          ; yes                    ;
-; nx_state.wait3_286                                 ; Selector17          ; yes                    ;
-; nx_state.wait1_314                                 ; Selector17          ; yes                    ;
-; nx_state.wait2_300                                 ; Selector17          ; yes                    ;
-; nx_state.st0_384                                   ; Selector17          ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; display:U2|contador:U1|\P1:tempD[2]   ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -257,33 +282,219 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 12    ;
+; Total registers                              ; 64    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 12    ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 64    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 8     ;
+; Number of registers using Clock Enable       ; 6     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------+
-; Source assignments for Top-level Entity: |maquinaDeEstado ;
-+--------------------------+---------+------+---------------+
-; Assignment               ; Value   ; From ; To            ;
-+--------------------------+---------+------+---------------+
-; STATE_MACHINE_PROCESSING ; ONE_HOT ; -    ; pr_state      ;
-+--------------------------+---------+------+---------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; div_clk:U1|clk_1seg_temp               ; 38      ;
+; display:U3|contador:U1|count_fim       ; 4       ;
+; display:U2|contador:U1|count_fim       ; 6       ;
+; Total number of inverted registers = 3 ;         ;
++----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |maquinaDeEstado ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; TC             ; 10    ; Signed Integer                                         ;
-+----------------+-------+--------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |semaforo|display:U2|contador:U1|\P1:tempU[2] ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |semaforo|display:U3|contador:U1|\P1:tempU[2] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |semaforo|display:U3|contador:U1|\P1:tempD[0] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |semaforo|display:U2|contador:U1|\P1:tempD[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; Source assignments for maquinaDeEstado:U6            ;
++--------------------------+---------+------+----------+
+; Assignment               ; Value   ; From ; To       ;
++--------------------------+---------+------+----------+
+; STATE_MACHINE_PROCESSING ; ONE_HOT ; -    ; pr_state ;
++--------------------------+---------+------+----------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |semaforo ;
++----------------+----------+----------------------------------------------+
+; Parameter Name ; Value    ; Type                                         ;
++----------------+----------+----------------------------------------------+
+; fclk2_in       ; 25000000 ; Signed Integer                               ;
+; D_vm           ; 3        ; Signed Integer                               ;
+; U_vm           ; 0        ; Signed Integer                               ;
+; D_vd           ; 2        ; Signed Integer                               ;
+; U_vd           ; 0        ; Signed Integer                               ;
+; TC             ; 10       ; Signed Integer                               ;
+; tipo_display   ; 1        ; Signed Integer                               ;
++----------------+----------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: div_clk:U1 ;
++----------------+----------+-----------------------------+
+; Parameter Name ; Value    ; Type                        ;
++----------------+----------+-----------------------------+
+; fclk2          ; 25000000 ; Signed Integer              ;
++----------------+----------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U2 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; d              ; 3     ; Signed Integer                 ;
+; u              ; 0     ; Signed Integer                 ;
+; tipo_display   ; 1     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U2|contador:U1 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; d              ; 3     ; Signed Integer                             ;
+; u              ; 0     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U2|bin2ssd:U2 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; ac_ccn         ; 1     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U2|bin2ssd:U3 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; ac_ccn         ; 1     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U3 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; d              ; 2     ; Signed Integer                 ;
+; u              ; 0     ; Signed Integer                 ;
+; tipo_display   ; 1     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U3|contador:U1 ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; d              ; 2     ; Signed Integer                             ;
+; u              ; 0     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U3|bin2ssd:U2 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; ac_ccn         ; 1     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: display:U3|bin2ssd:U3 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; ac_ccn         ; 1     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sensor:U4 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; tc             ; 10    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sensor:U5 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; tc             ; 10    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: maquinaDeEstado:U6 ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; tc             ; 99    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bin2ssd:U7 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; ac_ccn         ; 1     ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------+
+; Port Connectivity Checks: "display:U3"   ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at VCC ;
+; rsts   ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "display:U2"   ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at VCC ;
+; rsts   ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
 
 
 +-------------------------------+
@@ -301,7 +512,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Thu Dec 13 14:48:16 2018
+    Info: Processing started: Fri Dec 14 14:42:55 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off semaforo -c semaforo
 Info (11104): Parallel Compilation has detected 40 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 16 of the 20 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file sensor.vhd
@@ -325,68 +536,39 @@ Info (12021): Found 2 design units, including 1 entities, in source file bin2ssd
 Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
     Info (12022): Found design unit 1: display-ifsc
     Info (12023): Found entity 1: display
-Info (12127): Elaborating entity "maquinaDeEstado" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at maquinaDeEstado.vhd(28): signal "flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at maquinaDeEstado.vhd(46): inferring latch(es) for signal or variable "nx_state", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquinaDeEstado.vhd(46): inferring latch(es) for signal or variable "timer", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquinaDeEstado.vhd(46): inferring latch(es) for signal or variable "flag", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquinaDeEstado.vhd(46): inferring latch(es) for signal or variable "flag_vm", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquinaDeEstado.vhd(46): inferring latch(es) for signal or variable "rst_dip_vm", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquinaDeEstado.vhd(46): inferring latch(es) for signal or variable "flag_vd", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at maquinaDeEstado.vhd(46): inferring latch(es) for signal or variable "rst_dip_vd", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "rst_dip_vd" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "flag_vd" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "rst_dip_vm" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "flag_vm" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "flag" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "timer[0]" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "timer[1]" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "timer[2]" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "timer[3]" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.wait3" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.wait2" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.wait1" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.st4" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.st3" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.st2" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.st1" at maquinaDeEstado.vhd(46)
-Info (10041): Inferred latch for "nx_state.st0" at maquinaDeEstado.vhd(46)
-Warning (13012): Latch nx_state.st3_342 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador
-Warning (13012): Latch timer[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal pr_state.st2
-Warning (13012): Latch nx_state.st1_370 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador
-Warning (13012): Latch nx_state.st4_328 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador
-Warning (13012): Latch nx_state.st2_356 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal s1
-Warning (13012): Latch nx_state.wait3_286 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador
-Warning (13012): Latch nx_state.wait1_314 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal btn1
-Warning (13012): Latch nx_state.wait2_300 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal contador
-Warning (13012): Latch nx_state.st0_384 has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal btn1
+Info (12127): Elaborating entity "semaforo" for the top level hierarchy
+Info (12128): Elaborating entity "div_clk" for hierarchy "div_clk:U1"
+Info (12128): Elaborating entity "display" for hierarchy "display:U2"
+Info (12128): Elaborating entity "contador" for hierarchy "display:U2|contador:U1"
+Info (12128): Elaborating entity "bin2ssd" for hierarchy "display:U2|bin2ssd:U2"
+Info (12128): Elaborating entity "display" for hierarchy "display:U3"
+Info (12128): Elaborating entity "contador" for hierarchy "display:U3|contador:U1"
+Info (12128): Elaborating entity "sensor" for hierarchy "sensor:U4"
+Info (12128): Elaborating entity "maquinaDeEstado" for hierarchy "maquinaDeEstado:U6"
+Warning (10492): VHDL Process Statement warning at maquinaDeEstado.vhd(52): signal "timer" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at maquinaDeEstado.vhd(53): signal "pr_state" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "sensor:U4|presenca" is converted into an equivalent circuit using register "sensor:U4|presenca~_emulated" and latch "sensor:U4|presenca~1"
+    Warning (13310): Register "sensor:U5|presenca" is converted into an equivalent circuit using register "sensor:U5|presenca~_emulated" and latch "sensor:U5|presenca~1"
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "flag_vm" is stuck at VCC
-    Warning (13410): Pin "flag_vd" is stuck at VCC
-    Warning (13410): Pin "rst_dip_vd" is stuck at GND
-    Warning (13410): Pin "rst_dip_vm" is stuck at GND
-    Warning (13410): Pin "CVD" is stuck at VCC
-    Warning (13410): Pin "PVM" is stuck at VCC
+    Warning (13410): Pin "ssd_D[1]" is stuck at GND
+    Warning (13410): Pin "ssd_Dp[1]" is stuck at GND
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register display:U3|contador:U1|count_fim will power up to High
+    Critical Warning (18010): Register display:U2|contador:U1|count_fim will power up to High
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 55 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 33 warnings
-    Info: Peak virtual memory: 422 megabytes
-    Info: Processing ended: Thu Dec 13 14:48:20 2018
+Info (21057): Implemented 229 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 51 output pins
+    Info (21061): Implemented 172 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 426 megabytes
+    Info: Processing ended: Fri Dec 14 14:42:59 2018
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 

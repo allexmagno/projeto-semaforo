@@ -3,12 +3,13 @@ vcom -93 -work work {../../maquinaDeEstado.vhd}
 vsim work.maquinadeestado
 
 do ms_wave.do
-force -freeze sim:/maquinadeestado/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/maquinadeestado/rst 0 0, 1 5
-force -freeze sim:/maquinadeestado/btn1 1 0, 0 120, 1 300
-force -freeze sim:/maquinadeestado/btn2 1 0, 0 240, 1 500
 
-force -freeze sim:/maquinadeestado/s1 0 0, 1 20, 0 300, 1 1300, 0 1400 
-force -freeze sim:/maquinadeestado/s2 0 0, 1 500, 0 600, 1 1380, 0 1500
+force -freeze sim:/maquinadeestado/rst 0 0, 1 2
+force -freeze sim:/maquinadeestado/clk 0 0, 1 20, 0 {0.5 sec} -r 1 sec
+force -freeze sim:/maquinadeestado/btn1 0 0, 1 20 sec, 0 25 sec, 1 83 sec, 0 85 sec
+force -freeze sim:/maquinadeestado/btn2 0 0, 1 60 sec, 0 65 sec, 1 115 sec, 0 117 sec
+force -freeze sim:/maquinadeestado/contador_fim_VM 0 0, 1 72 sec
+force -freeze sim:/maquinadeestado/contador_fim_VD 0 0, 1 94 sec
+force -freeze sim:/maquinadeestado/s1 0 0, 1 75 sec, 0 80 sec, 1 81 sec, 0 90 sec
 
-run 10000
+run 200 sec

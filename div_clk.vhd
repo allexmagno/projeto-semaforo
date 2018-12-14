@@ -17,7 +17,7 @@ begin
 	divClock:PROCESS (clk, rst) -- e sequencial pois tem rising_edge
 	VARIABLE temp: natural RANGE 0 TO fclk2*2;
 	BEGIN
-	if (rst = '0') then
+	if (rst = '1') then
 		clk_1seg_temp <= '1';
 		temp := 0;
 	elsif (rising_edge(clk)) THEN

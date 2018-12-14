@@ -32,24 +32,17 @@ vsim work.maquinadeestado
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.maquinadeestado(fsm)
-add wave -position end  sim:/maquinadeestado/clk
-add wave -position end  sim:/maquinadeestado/rst
-add wave -position end  sim:/maquinadeestado/s1
-add wave -position end  sim:/maquinadeestado/s2
-add wave -position end  sim:/maquinadeestado/btn1
-add wave -position end  sim:/maquinadeestado/btn2
-add wave -position end  sim:/maquinadeestado/contador
-add wave -position end  sim:/maquinadeestado/flag_vm
-add wave -position end  sim:/maquinadeestado/flag_vd
-add wave -position end  sim:/maquinadeestado/rst_dip_vd
-add wave -position end  sim:/maquinadeestado/rst_dip_vm
-add wave -position end  sim:/maquinadeestado/CVD
-add wave -position end  sim:/maquinadeestado/CVM
-add wave -position end  sim:/maquinadeestado/CAM
-add wave -position end  sim:/maquinadeestado/PVD
-add wave -position end  sim:/maquinadeestado/PVM
-force -freeze sim:/maquinadeestado/clk 1 0, 0 {50 ps} -r 100
-force -freeze sim:/maquinadeestado/rst 1 0
+add wave sim:/maquinadeestado/*
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftE2CqWl".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftE2CqWl
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/182/dlp/projeto-final/simulation/modelsim/ms_wave.do
 do tb_ms.do
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -63,6 +56,24 @@ do tb_ms.do
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftPCiJpD".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftPCiJpD
+# ** Error: (vsim-4026) Value "3" does not represent a literal of the enumeration type.
+# ** Error: (vsim-4011) Invalid force value: 3 0, 0 {0.5 sec}.
+# Error in macro ./tb_ms.do line 8
+# ** Error: (vsim-4026) Value "3" does not represent a literal of the enumeration type.
+# ** Error: (vsim-4011) Invalid force value: 3 0, 0 {0.5 sec}.
+# 
+#     while executing
+# "force -freeze sim:/maquinadeestado/clk 3 0, 0 {0.5 sec} -r 1 sec"
 do tb_ms.do
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -75,6 +86,22 @@ do tb_ms.do
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftbBgFys".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbBgFys
+# ** Error: (vsim-3462) Value/time pairs must be listed in increasing time order.
+# Error in macro ./tb_ms.do line 13
+# ** Error: (vsim-3462) Value/time pairs must be listed in increasing time order.
+# 
+#     while executing
+# "force -freeze sim:/maquinadeestado/s2 0 0, 1 120 sec, 0 125 sec, 1 1380"
 do tb_ms.do
 # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 # -- Loading package STANDARD
@@ -87,42 +114,233 @@ do tb_ms.do
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.maquinadeestado(fsm)
-add wave -position 2  sim:/maquinadeestado/pr_state
-add wave -position 3  sim:/maquinadeestado/nx_state
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftccPOMg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftccPOMg
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftEULMvq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftEULMvq
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlfthgoB4F".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthgoB4F
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftTql0Hj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftTql0Hj
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftSVEwF6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftSVEwF6
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro ./tb_ms.do line 9
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force -freeze sim:/maquinadeestado/btn1 0 0, 1 20 sec, 0 25 sec. 1 83 sec, 0 90 sec"
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlft9eAgCf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9eAgCf
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftiNBR9V".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftiNBR9V
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftboaIox".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftboaIox
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro ./tb_ms.do line 10
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force -freeze sim:/maquinadeestado/btn2 0 0, 1 60 sec, 0 65 sec1 1 115 sec, 2 117 sec"
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlft3BQhPG".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3BQhPG
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# Error in macro ./tb_ms.do line 10
+# ** Error: (vsim-4012) Expected ',' separator between value/time pairs.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+#     while executing
+# "force -freeze sim:/maquinadeestado/btn2 0 0, 1 60 sec, 0 65 sec1 1 115 sec, 1 117 sec"
+do tb_ms.do
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity maquinaDeEstado
+# -- Compiling architecture fsm of maquinaDeEstado
+# vsim work.maquinadeestado 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.maquinadeestado(fsm)
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: allex.m  Hostname: quartus-859785bd96-f4gh6  ProcessID: 9599
+#           Attempting to use alternate WLF file "./wlftJ4ipIq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftJ4ipIq
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/allex.m/182/dlp/projeto-final/simulation/modelsim/ms_wave.do
-do tb_ms.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity maquinaDeEstado
-# -- Compiling architecture fsm of maquinaDeEstado
-# vsim work.maquinadeestado 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.maquinadeestado(fsm)
-do tb_ms.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity maquinaDeEstado
-# -- Compiling architecture fsm of maquinaDeEstado
-# vsim work.maquinadeestado 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.maquinadeestado(fsm)
-do tb_ms.do
-# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity maquinaDeEstado
-# -- Compiling architecture fsm of maquinaDeEstado
-# vsim work.maquinadeestado 
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.maquinadeestado(fsm)

@@ -1,5 +1,5 @@
 Flow report for semaforo
-Thu Dec 13 14:48:20 2018
+Fri Dec 14 14:43:44 2018
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 13 14:48:19 2018            ;
+; Flow Status                        ; Successful - Fri Dec 14 14:43:44 2018            ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; semaforo                                         ;
-; Top-level Entity Name              ; maquinaDeEstado                                  ;
+; Top-level Entity Name              ; semaforo                                         ;
 ; Family                             ; Cyclone IV E                                     ;
 ; Device                             ; EP4CE115F29C7                                    ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 32                                               ;
-;     Total combinational functions  ; 32                                               ;
-;     Dedicated logic registers      ; 12                                               ;
-; Total registers                    ; 12                                               ;
-; Total pins                         ; 16                                               ;
+; Total logic elements               ; 158 / 114,480 ( < 1 % )                          ;
+;     Total combinational functions  ; 158 / 114,480 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 64 / 114,480 ( < 1 % )                           ;
+; Total registers                    ; 64                                               ;
+; Total pins                         ; 57 / 529 ( 11 % )                                ;
 ; Total virtual pins                 ; 0                                                ;
-; Total memory bits                  ; 0                                                ;
-; Embedded Multiplier 9-bit elements ; 0                                                ;
-; Total PLLs                         ; 0                                                ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                            ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                  ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                    ;
 +------------------------------------+--------------------------------------------------+
 
 
@@ -64,55 +64,70 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/13/2018 14:48:17 ;
+; Start date & time ; 12/14/2018 14:42:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; semaforo            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                               ;
-+-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name     ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 11373243925596.154471249726262        ; --            ; --              ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --              ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --              ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --              ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --              ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; maquinaDeEstado ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; maquinaDeEstado ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; maquinaDeEstado ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --              ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --              ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --              ; --             ;
-; TOP_LEVEL_ENTITY                    ; maquinaDeEstado                       ; semaforo      ; --              ; --             ;
-+-------------------------------------+---------------------------------------+---------------+-----------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 11373243925596.154479857608660        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                     ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; --          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 422 MB              ; 00:00:02                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:02                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 426 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:23     ; 5.2                     ; 1031 MB             ; 00:00:41                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 341 MB              ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:06     ; 1.0                     ; 506 MB              ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 320 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:55                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                ;
-+----------------------+--------------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname         ; OS Name        ; OS Version ; Processor type ;
-+----------------------+--------------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; quartus-859785bd96-f4gh6 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
-+----------------------+--------------------------+----------------+------------+----------------+
++-----------------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                                     ;
++---------------------------+--------------------------+----------------+------------+----------------+
+; Module Name               ; Machine Hostname         ; OS Name        ; OS Version ; Processor type ;
++---------------------------+--------------------------+----------------+------------+----------------+
+; Analysis & Synthesis      ; quartus-859785bd96-f4gh6 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Fitter                    ; quartus-859785bd96-f4gh6 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; Assembler                 ; quartus-859785bd96-f4gh6 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; TimeQuest Timing Analyzer ; quartus-859785bd96-f4gh6 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
+; EDA Netlist Writer        ; quartus-859785bd96-f4gh6 ; Ubuntu 18.04.1 ; 18         ; x86_64         ;
++---------------------------+--------------------------+----------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off semaforo -c semaforo
+quartus_fit --read_settings_files=off --write_settings_files=off semaforo -c semaforo
+quartus_asm --read_settings_files=off --write_settings_files=off semaforo -c semaforo
+quartus_sta semaforo -c semaforo
+quartus_eda --read_settings_files=off --write_settings_files=off semaforo -c semaforo
 
 
 

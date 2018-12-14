@@ -11,10 +11,10 @@ entity display IS
 	(
 		clk :  in  STD_LOGIC;
 		rst_in	:	in	std_LOGIC;
-		flag : in std_LOGIC;
+		enable, load, rstS : in std_logic;
 		ssd_D :  out  STD_LOGIC_VECTOR(0 TO 6);
 		ssd_U :  out  STD_LOGIC_VECTOR(0 TO 6);
-		count : out std_LOGIC
+		count_fim : out std_LOGIC
 	);
 end entity;
 
@@ -22,17 +22,17 @@ architecture ifsc of display is
 
 -- Declaraçao dos componentes utilizados
 
-	component contador is
-		generic (D : natural := 9; 	U : natural := 9
-		);
-		port (
-			clk : in std_logic;
-			rst: in	std_logic;
-			flag : in std_logic;
-			bcd_U : out std_logic_vector(3 downto 0);
-			bcd_D : out std_logic_vector(3 downto 0);
-			count : out std_logic
-		);
+component contador is
+	generic (D : natural := 4; 	U : natural := 0
+	);
+	port (
+		clk : in std_logic;
+		rstA: in std_logic;
+		enable, load, rstS : in std_logic;
+		bcd_U : out std_logic_vector(3 downto 0);
+		bcd_D : out std_logic_vector(3 downto 0);
+		count_fim : out std_logic := '0'
+	);
 	end component;
 	
 	component bin2ssd is
@@ -58,11 +58,13 @@ begin
 		)
 	port map (
 		clk => clk,
-		rst => rst_in,
-		flag => flag,
+		rstA => rst_in,
+		enable => enable,
+		load => load,
+		rstS => rstS,
 		bcd_U => bcdU_temp,
 		bcd_D => bcdD_temp,
-		count => cont_temp
+		count_fim => cont_temp
 		
 	);
 	
@@ -82,7 +84,7 @@ begin
 			ssd_out => ssd_D_temp
 		);
 		
-	count <= cont_temp;
+	count_fim <= cont_temp;
 	ssd_D <= ssd_D_temp;
 	ssd_U <= ssd_U_temp;
 	

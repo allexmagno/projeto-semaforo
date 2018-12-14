@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Dec 13 14:48:19 2018
+Analysis & Synthesis Status : Successful - Fri Dec 14 14:42:59 2018
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : semaforo
-Top-level Entity Name : maquinaDeEstado
+Top-level Entity Name : semaforo
 Family : Cyclone IV E
-Total logic elements : 32
-    Total combinational functions : 32
-    Dedicated logic registers : 12
-Total registers : 12
-Total pins : 16
+Total logic elements : 158
+    Total combinational functions : 158
+    Dedicated logic registers : 64
+Total registers : 64
+Total pins : 57
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
